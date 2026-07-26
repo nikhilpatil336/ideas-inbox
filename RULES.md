@@ -8,19 +8,28 @@ Capture ideas the moment they come up so none get lost, then execute them autono
 
 ## Logging ideas
 
-- Any idea worth keeping — from any conversation, any project — gets appended to `inbox.md` in this repo immediately. Don't wait to "batch" ideas locally; the overnight routine only sees what's pushed.
-- Format: `- [ ] <description> — repo: <target repo URL>`
-- If the target repo isn't known yet, log with `repo: TBD` anyway and fill it in later. Log first, refine later — never skip logging because details are incomplete.
-- Commit and push right after adding an item.
+- `inbox.md` is one permanent file — the full history of every idea ever logged, across every project. Nothing is ever moved out or deleted; done and blocked ideas stay in place, just marked. This is deliberate: it doubles as the complete idea log.
+- Structure: one `## <project-name> — repo: <git URL>` heading per project, with `- [ ]` idea lines underneath.
+- New project → add a new heading. New idea → add a line under the right heading.
+- Any idea worth keeping — from any conversation, any project — gets appended immediately. Don't wait to "batch" ideas locally; the overnight routine only sees what's pushed. Commit and push right after adding.
+- If the target repo isn't known yet, use the heading `## <project-name> — repo: TBD` and fill in the URL later. Log first, refine later — never skip logging because details are incomplete.
+
+**Status markers** (used on the `- [ ]` lines):
+- `[ ]` — not yet attempted
+- `[x]` — done, PR opened (PR URL appended to the line)
+- `[~]` — attempted, blocked on the user's input (a note is appended explaining exactly what's needed). The routine skips `[~]` items on future runs; the user resolves the note and flips it back to `[ ]` to get it picked up again.
 
 ## The overnight routine
 
 - Trigger: `trig_01X9KW3JB5ZKsRC2yXQ7mbrB` (RemoteTrigger), console: https://claude.ai/code/routines/trig_01X9KW3JB5ZKsRC2yXQ7mbrB
 - Schedule: Wednesdays 18:30 UTC = Thursdays 00:00 Asia/Calcutta, weekly (runs on leftover quota before Thursday's reset)
 - Model: claude-sonnet-5
-- Per run: clone this repo, read `RULES.md` (this file) and `inbox.md`. For each unchecked item, clone the target repo, implement, commit, push a branch, open a PR. **Never merge. Never push to main/master directly** — every change lands as a PR for manual review, no exceptions, regardless of how confident the agent is.
-- After opening a PR, check off the item in `inbox.md` and append the PR URL, then push that back to this repo.
-- If an idea can't be fully implemented (too vague, blocked, out of reach), still open a best-effort PR or draft, check off the item, and state the limitation plainly in both the PR and `inbox.md` — never leave it silently unchecked.
+- Currently a single sequential cloud session per run (not parallel instances per project) — it clones this repo, reads `RULES.md` and `inbox.md` once, then walks every `[ ]` item top to bottom. Revisit this only if the idea backlog outgrows what one run can get through.
+- Per idea: clone the target repo, implement, commit, push a branch, open a PR. **Never merge. Never push to main/master directly** — every change lands as a PR for manual review, no exceptions, regardless of how confident the agent is.
+- After opening a PR, mark the line `[x]` in `inbox.md` and append the PR URL.
+- **If an idea needs a decision or approval only the user can make** (ambiguous requirements, secrets/credentials, irreversible actions, conflicting valid approaches) — do not guess, and do not block the rest of the run. Mark the line `[~]`, append a note explaining precisely what input is needed, and move on to the next idea.
+- If an idea is merely difficult but resolvable with reasonable engineering judgment (not a real ambiguity), implement your best interpretation, note any assumptions made in the PR description, and mark `[x]` — don't mark `[~]` just because something was hard.
+- Once all `[ ]` items are processed (or turned into `[~]`), commit and push the updated `inbox.md` back to this repo in a single commit for the run.
 
 ## Engineering principles for implementing ideas
 

@@ -1,12 +1,17 @@
 # Ideas Inbox
 
-Log ideas here as unchecked items. Each idea should name its target repo so the overnight routine knows what to clone. The routine implements, commits, pushes a branch, and opens a PR — it never merges to main.
+Permanent, full history of every idea logged — across all projects. Nothing here ever gets moved or deleted; done and blocked ideas stay in place so you can always scroll back and see everything you've ever logged.
 
-Format:
-```
-- [ ] <description of the idea> — repo: <git URL>
-```
+**Status markers**
+- `[ ]` — not yet attempted
+- `[x]` — done, PR opened (link appended to the line)
+- `[~]` — attempted, blocked on your input (a note is appended explaining exactly what's needed). The overnight routine skips `[~]` items on future runs — once you resolve the question, edit the line back to `[ ]` so it gets picked up again.
 
-## Ideas
+**Adding an idea**
+- New project → add a new `## <project-name> — repo: <git URL>` heading.
+- New idea → add a `- [ ]` line under the right heading.
 
-- [ ] Example idea — repo: https://github.com/nikhilpatil336/example-repo
+---
+
+## example-project — repo: https://github.com/nikhilpatil336/example-repo
+- [ ] Example idea
