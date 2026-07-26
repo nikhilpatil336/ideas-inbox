@@ -61,7 +61,7 @@ Every project (existing or new) should get a context hierarchy applied so Claude
 
 ## Where things live
 
-- This repo: https://github.com/nikhilpatil336/ideas-inbox (local clone: `C:\Users\nikhi\ideas-inbox`)
+- This repo: https://github.com/nikhilpatil336/ideas-inbox (local clone: `D:\Projects\ideas-inbox`)
 - Idea log: `inbox.md`
 - Rules (this file): `RULES.md`
 - Context hierarchy template: `templates/context-hierarchy/`
