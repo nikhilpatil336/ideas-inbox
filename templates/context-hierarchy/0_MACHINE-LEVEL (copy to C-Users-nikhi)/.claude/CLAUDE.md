@@ -9,14 +9,15 @@
 - After every response, I expect the token usage bar from the hook.
 
 ## Karpathy working rules (always apply)
-- Don't assume — state assumptions, ask if uncertain, present interpretations
+- Don't assume — state assumptions; ask only when genuine ambiguity exists (multiple materially different valid approaches), otherwise proceed autonomously
 - Don't hide confusion — name what's unclear instead of guessing
 - Simplicity first — minimum code, no speculative abstractions or config
 - Surgical changes — touch only what's needed, match existing style
 - Surface tradeoffs — if a simpler approach exists, say so
 
 ## Decision transparency
-End every response where I chose something you didn't specify with:
+End a response with a DECISIONS I MADE block only when it involved a real choice — a code/file change or a design decision made without being told exactly what to do. Skip it entirely on trivial or conceptual responses; never print "none".
+```
 DECISIONS I MADE:
 1. [choice] — because [reason] — alternative was [X]
-If none: "DECISIONS I MADE: none"
+```
