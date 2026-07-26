@@ -44,8 +44,24 @@ These apply to every repo the routine touches:
 7. **Commit messages and PR descriptions explain why, not what.** The diff already shows what changed.
 8. **No speculative scope.** Implement exactly what the idea describes — no unrequested features, no hypothetical future-proofing.
 
+## Context hierarchy template
+
+Every project (existing or new) should get a context hierarchy applied so Claude has consistent, structured project memory instead of starting cold each session. The canonical, versioned copy lives in this repo at `templates/context-hierarchy/`.
+
+- One-time machine setup: copy `templates/context-hierarchy/0_MACHINE-LEVEL (copy to C-Users-nikhi)/.claude/` into `C:\Users\nikhi\.claude\` (merge `settings.json` by hand if it already exists — don't overwrite).
+- Per project: pick the matching type and copy its contents into the project root:
+  - `1_TYPE-A_single-project` — one codebase, any language
+  - `2_TYPE-B_conversion-project` — converting one language/stack to another
+  - `3_TYPE-C_monorepo` — multiple services, all present locally
+  - `4_TYPE-D_microservices` — multiple services, not all present locally
+- Fill in the project name/description at the top of `CLAUDE.md`, then run the bootstrap prompts in `PROMPTS-bootstrap.md` once to fill in `ai-context/`.
+- Full instructions: `templates/context-hierarchy/START-HERE.md`.
+
+**Multi-session file coordination.** If more than one Claude Code session runs on the same project at once, they can silently overwrite each other's edits — there's no built-in live channel between independently-launched sessions. The template solves this with a claim file, `sessions/active-work.md`, in every project: before writing to a file, a session checks that file, claims what it's about to touch if unclaimed, and stops to ask the user if another active session already holds a conflicting claim. Claims are released during `/wrap-up`. This is a convention enforced by each project's `CLAUDE.md` and `PROMPT-session-start.md`/`wrap-up` command, not a platform feature — it depends on every session actually reading its `CLAUDE.md`.
+
 ## Where things live
 
 - This repo: https://github.com/nikhilpatil336/ideas-inbox (local clone: `C:\Users\nikhi\ideas-inbox`)
 - Idea log: `inbox.md`
 - Rules (this file): `RULES.md`
+- Context hierarchy template: `templates/context-hierarchy/`

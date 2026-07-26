@@ -1,0 +1,27 @@
+{
+  "theme": "dark",
+  "hooks": {
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node C:/Users/nikhi/.claude/hooks/token-tracker.js"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cmd /c echo %date% %time% >> C:/Users/nikhi/.claude/audit.log"
+          }
+        ]
+      }
+    ]
+  }
+}
