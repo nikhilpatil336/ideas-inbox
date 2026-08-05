@@ -14,4 +14,4 @@ Permanent, full history of every idea logged — across all projects. Nothing he
 ---
 
 ## example-project — repo: https://github.com/nikhilpatil336/example-repo
-- [ ] Example idea
+- [~] Example idea — blocked: `nikhilpatil336/example-repo` does not exist on GitHub. This looks like leftover placeholder content (see `ai-context/tasks.md`: "remove it once a real idea is logged") rather than a real idea to implement. Needs your input: either delete this heading, or replace it with a real project + idea.
