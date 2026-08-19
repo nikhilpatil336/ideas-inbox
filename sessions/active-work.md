@@ -23,3 +23,4 @@ other's work.
 
 | Session label | Files / area claimed | Task | Started | Status |
 |---|---|---|---|---|
+| overnight-routine-2026-08-19 | inbox.md | Weekly overnight idea processing run | 2026-08-19 | released |
