@@ -24,3 +24,4 @@ other's work.
 | Session label | Files / area claimed | Task | Started | Status |
 |---|---|---|---|---|
 | overnight-routine-2026-08-19 | inbox.md | Weekly overnight idea processing run | 2026-08-19 | released |
+| log-skills-2026-11-01 | `inbox.md`, `RULES.md` | Log skill repos + 3 new project ideas | 2026-11-01 | released |

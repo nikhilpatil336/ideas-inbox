@@ -15,6 +15,8 @@ Capture ideas the moment they come up so none get lost, then execute them autono
 - If the target repo isn't known yet, use the heading `## <project-name> — repo: TBD` and fill in the URL later. Log first, refine later — never skip logging because details are incomplete.
 - Some projects share one monorepo instead of having their own repo (e.g. several scraping-based ideas live in `scraper-platform`, each as its own subfolder under `apps/`). For these, the heading includes a path in parentheses: `## <project-name> — repo: <git URL> (apps/<project-name>)`. When implementing one of these, clone the repo but scope all changes to that subfolder only — don't touch other apps/packages in the same repo, and the PR should only contain that subfolder's changes.
 
+- Lines starting with `Skills:` or under `## general-skills` / `## Skill repo URLs` are reference notes, not tasks — skip them as work items. When implementing a project, you may use its listed skills; vet any skill's code before installing it.
+
 **Status markers** (used on the `- [ ]` lines):
 - `[ ]` — not yet attempted
 - `[x]` — done, PR opened (PR URL appended to the line)
