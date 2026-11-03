@@ -59,6 +59,9 @@ Skills: Claude-Code-Game-Studios, mcp-for-blender (only if 3D)
 Skills: marketingskills, ai-website-cloner-template (layout reference only), next-ai-draw-io
 - [ ] Clothing store management website: inventory, orders, customers, storefront. Needs scope input: single shop vs. multi-vendor, online payments, India-specific tax/GST.
 
+## ipo-listing-exit-bot — repo: TBD
+- [~] Auto-sell allotted mainboard + SME IPO shares on listing day: at 10:00 place an exchange-side SL, trail it up as price rises, sell on pullback or by 15:15. Range anchored on pre-open discovered price (GMP/subscription only as secondary input). **Blocked (2026-11-03):** still in planning with user — broker choice, below-issue-price rule, single-day vs multi-day hold, Pi vs cloud host (SEBI static-IP rule) undecided. Backtest listing-day data before building. Real money — do NOT implement overnight until plan is approved. Full plan: `sessions/2026-11-03-ipo-listing-exit-bot.md` (local only).
+
 ## general-skills — repo: n/a (reference list, not implementable)
 - ECC (https://github.com/affaan-m/ECC) — Claude Code harness optimization: skills, memory, security
 - claude-howto (https://github.com/luongnv89/claude-howto), claude-code-best-practice (https://github.com/shanraisshan/claude-code-best-practice) — Claude Code learning references
