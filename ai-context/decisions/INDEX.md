@@ -8,6 +8,7 @@
 |-----|-------|--------|------|
 | 001 | Scope which V5 template additions apply to ideas-inbox root | active | ADR-001-scope-v5-template-additions-to-root.md |
 | 002 | Support monorepo-style project headings in inbox.md | active | ADR-002-monorepo-heading-convention.md |
+| 003 | Build IPO exit bot inside local_to_smartapi, isolated from intraday flow | active | ADR-003-ipo-bot-inside-local-to-smartapi.md |
 
 ## Archived (superseded)
 <!-- Moved here when a decision is reversed -->

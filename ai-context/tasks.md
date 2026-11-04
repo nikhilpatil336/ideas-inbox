@@ -15,7 +15,11 @@
   - Not yet logged to `inbox.md` — still at design stage, not a scoped implementable slice.
 
 - [ ] Plan IPO listing-day exit bot (mainboard + SME, trailing SL)
-  - State: initial assessment done, awaiting user answers (broker, below-issue-price rule, single vs multi-day hold, Pi vs cloud host). Logged as `[~]` in `inbox.md`. See `sessions/2026-11-03-ipo-listing-exit-bot.md` for full context.
+  - [x] Initial assessment (2026-11-03)
+  - [x] User answered 4 blockers (2026-11-04): Angel One; below issue price → sell immediately; hold for days until stop hit (no day cap); host on Pi inside existing `local_to_smartapi` app (ADR-003)
+  - [x] Explored `local_to_smartapi`, checked 15:00 square-off (only touches `OrderRegistry` contexts), committed its pending work as `67501a0` on `feature/claude-code-changes` (NOT pushed)
+  - [ ] Awaiting user approval of design + price-filter fix + BSE resubscribe fix, plus X/Y % values and manual-entry-v1 OK. Then build in a git worktree, show diff before merge.
+  - Full state: `sessions/2026-11-05-ipo-exit-bot-design.md` (supersedes open questions in `sessions/2026-11-03-ipo-listing-exit-bot.md`).
 
 ---
 

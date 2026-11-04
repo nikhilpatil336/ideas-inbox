@@ -59,8 +59,8 @@ Skills: Claude-Code-Game-Studios, mcp-for-blender (only if 3D)
 Skills: marketingskills, ai-website-cloner-template (layout reference only), next-ai-draw-io
 - [ ] Clothing store management website: inventory, orders, customers, storefront. Needs scope input: single shop vs. multi-vendor, online payments, India-specific tax/GST.
 
-## ipo-listing-exit-bot — repo: TBD
-- [~] Auto-sell allotted mainboard + SME IPO shares on listing day: at 10:00 place an exchange-side SL, trail it up as price rises, sell on pullback or by 15:15. Range anchored on pre-open discovered price (GMP/subscription only as secondary input). **Blocked (2026-11-03):** still in planning with user — broker choice, below-issue-price rule, single-day vs multi-day hold, Pi vs cloud host (SEBI static-IP rule) undecided. Backtest listing-day data before building. Real money — do NOT implement overnight until plan is approved. Full plan: `sessions/2026-11-03-ipo-listing-exit-bot.md` (local only).
+## ipo-listing-exit-bot — repo: https://github.com/nikhilpatil336/SmartAPI_ChartInk_Trading (new `ipo/` package)
+- [~] Auto-sell allotted mainboard + SME IPO shares: at 10:00 on listing day sell immediately if below issue price, else place an exchange-side SL and trail it up; hold across days (re-place SL each morning) until the stop is hit. Angel One, runs on the Pi inside the existing `local_to_smartapi` app. **Blocked (2026-11-05):** design + two shared-code fixes (price-filter freeze, BSE resubscribe) awaiting user approval in an interactive session. Real money — do NOT implement overnight. Full state: `sessions/2026-11-05-ipo-exit-bot-design.md` (local only).
 
 ## general-skills — repo: n/a (reference list, not implementable)
 - ECC (https://github.com/affaan-m/ECC) — Claude Code harness optimization: skills, memory, security

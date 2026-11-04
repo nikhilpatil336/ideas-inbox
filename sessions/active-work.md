@@ -25,4 +25,5 @@ other's work.
 |---|---|---|---|---|
 | overnight-routine-2026-08-19 | inbox.md | Weekly overnight idea processing run | 2026-08-19 | released |
 | log-skills-2026-11-01 | `inbox.md`, `RULES.md` | Log skill repos + 3 new project ideas | 2026-11-01 | released |
-| ipo-exit-bot-2026-11-03 | `inbox.md`, `ai-context/tasks.md`, `sessions/2026-11-03-ipo-listing-exit-bot.md` | Log + plan IPO listing-day exit bot | 2026-11-03 | active |
+| ipo-exit-bot-2026-11-03 | `inbox.md`, `ai-context/tasks.md`, `sessions/2026-11-03-ipo-listing-exit-bot.md` | Log + plan IPO listing-day exit bot | 2026-11-03 | released |
+| ipo-exit-bot-2026-11-04 | `inbox.md`, `ai-context/tasks.md`, `ai-context/decisions/`, `sessions/2026-11-05-ipo-exit-bot-design.md`; outside repo: `local_to_smartapi` (commit `67501a0` only) | IPO bot design in `local_to_smartapi` | 2026-11-04 | released |
