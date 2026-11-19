@@ -62,6 +62,12 @@ Skills: marketingskills, ai-website-cloner-template (layout reference only), nex
 ## ipo-listing-exit-bot — repo: https://github.com/nikhilpatil336/SmartAPI_ChartInk_Trading (new `ipo/` package)
 - [~] Auto-sell allotted mainboard + SME IPO shares: at 10:00 on listing day sell immediately if below issue price, else place an exchange-side SL and trail it up; hold across days (re-place SL each morning) until the stop is hit. Angel One, runs on the Pi inside the existing `local_to_smartapi` app. **Blocked (2026-11-05):** design + two shared-code fixes (price-filter freeze, BSE resubscribe) awaiting user approval in an interactive session. Real money — do NOT implement overnight. Full state: `sessions/2026-11-05-ipo-exit-bot-design.md` (local only).
 
+## gold-outlook-scenarios — repo: TBD
+- [ ] Gold price outlook for the next 3–6 months: identify the factors that drive gold (real yields, USD/DXY, central-bank buying, inflation expectations, geopolitical risk, ETF flows, INR/USD for the India price), check each factor's current state, and build multiple scenarios (bull / base / bear) with a view on how gold behaves in each. Needs scope decision: one-off written report vs. a re-runnable tool that refreshes the factor data, and which gold price (international USD/oz vs. India MCX/₹ per 10 g).
+
+## futures-order-wall-strategy — repo: https://github.com/nikhilpatil336/SmartAPI_ChartInk_Trading (new package, separate from intraday flow and `ipo/`)
+- [~] In the Spring Boot trading app, trade futures instead of equity, and use big buy/sell order walls (large resting orders in the market depth) as a signal. **Blocked (2026-11-20):** real money, so do NOT implement overnight. Needs the user to settle: which instruments (index/stock futures, MCX gold futures?), what counts as a "wall" (size threshold, distance from LTP, how long it must persist), how the wall is used (entry trigger, stop placement, or filter), and whether depth data comes from Angel One SmartAPI SnapQuote or the existing `paper-trader` recorder. Paper-trade first.
+
 ## general-skills — repo: n/a (reference list, not implementable)
 - ECC (https://github.com/affaan-m/ECC) — Claude Code harness optimization: skills, memory, security
 - claude-howto (https://github.com/luongnv89/claude-howto), claude-code-best-practice (https://github.com/shanraisshan/claude-code-best-practice) — Claude Code learning references
